@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/isopov/heroku-postgres.svg?branch=master)](https://travis-ci.org/isopov/heroku-postgres)
 # Используем базу данных на Heroku
 
 Это описание и пример использования Postgres на Heroku.
