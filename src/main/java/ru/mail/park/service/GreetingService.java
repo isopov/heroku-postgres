@@ -25,7 +25,7 @@ public class GreetingService {
   public void create(Greeting greeting) {
     //вообще у нас нет гарантии что у более новой записи будет больший id
     template.update(
-        "delete from greetings where id < (select min(id) from (select id from greetings order by id desc limit 100))");
+        "delete from greetings where id < (select min(id) from (select id from greetings order by id desc limit 100) as desc_ids)");
     
     template.update("insert into greetings(name, greeting) values(?,?)", greeting.getName(),
         greeting.getGreeting());
